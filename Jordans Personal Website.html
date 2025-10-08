@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jordan Foster — Personal Website</title>
+<meta name="description" content="Jordan Foster | MIS @ Texas A&M • Solutions-minded with experience in sales strategy, product management, and technical ops."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b1020; --surface:#0f1733; --card:#121a3a; --text:#eaf0ff; --muted:#aab7ff;
+    --brand:#7dd3fc; --brand2:#a78bfa; --line:#22305b;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+    color:var(--text);
+    background:
+      radial-gradient(1100px 500px at 90% -10%, #2563eb33, transparent 60%),
+      radial-gradient(900px 400px at -10% 10%, #22d3ee25, transparent 60%),
+      var(--bg);
+    line-height:1.6;
+  }
+  a{color:var(--brand);text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:18px}
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#0b1020ee,transparent)}
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    border:1px solid var(--line); background:var(--surface); padding:10px 14px; border-radius:16px; 
+    backdrop-filter:blur(6px)
+  }
+  .logo{font-weight:800;letter-spacing:.2px}
+  .nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+  .nav a{display:inline-block;padding:8px 12px;border-radius:999px;border:1px solid transparent}
+  .nav a:hover{border-color:#31457a;background:#0d1538}
+  /* HERO */
+  .hero{
+    margin-top:20px; display:grid; gap:22px;
+    grid-template-columns: 1.1fr .9fr; align-items:center;
+    background:linear-gradient(135deg,#0ea5e9 0%, #8b5cf6 65%, #f472b6 125%);
+    border-radius:22px; padding: clamp(22px,5vw,40px); color:#fff; overflow:hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,.35);
+  }
+  .hero h1{margin:0 0 8px; font-size: clamp(26px,4.6vw,48px); letter-spacing:-.02em}
+  .hero p{margin:0; opacity:.96}
+  .hero .cta{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap}
+  .btn{
+    display:inline-block; font-weight:700; padding:11px 16px; border-radius:999px;
+    border:1px solid #ffffff55; color:#0b1020; background:#ffffff; 
+  }
+  .btn.ghost{color:#fff;background:#0000002a;border-color:#ffffff55}
+  .headshot{
+    width:100%; max-width:360px; justify-self:end; aspect-ratio:1/1; object-fit:cover;
+    border-radius:18px; border:2px solid #ffffff55; box-shadow:0 18px 50px rgba(0,0,0,.45);
+  }
+  /* INTRO */
+  section{margin-top:28px}
+  h2{margin:0 0 10px; font-size: clamp(20px,2.8vw,28px)}
+  .intro{
+    background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:18px;
+  }
+  .badges{display:flex; gap:10px; flex-wrap:wrap; margin-top:8px}
+  .badge{font-weight:700;font-size:12px;padding:6px 10px;border-radius:999px;background:#0c1537;border:1px solid #22305c;color:var(--muted)}
+  /* GRID CARDS */
+  .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fit, minmax(260px,1fr))}
+  .card{
+    background:linear-gradient(180deg,var(--card),#0e1432);
+    border:1px solid var(--line); border-radius:16px; padding:14px;
+    transition:transform .15s, border-color .2s, box-shadow .2s;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+  }
+  .card:hover{transform:translateY(-4px); border-color:#3a5298; box-shadow:0 18px 44px rgba(0,0,0,.35)}
+  .muted{color:var(--muted)}
+  ul{margin:8px 0; padding-left:18px}
+  /* FOOTER */
+  footer{margin:34px 0 16px; text-align:center; color:var(--muted); font-size:14px}
+  @media (max-width:800px){ .hero{grid-template-columns:1fr} .headshot{justify-self:center} }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- NAV (inspired by your template) -->
+    <header>
+      <nav class="nav">
+        <div class="logo">Jordan Foster</div>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <h1>Solutions-minded MIS Student @ Texas A&M</h1>
+        <p>Passionate about financial literacy, product thinking, and using data & systems to make work easier for people.</p>
+        <div class="cta">
+          <a class="btn" href="Jordan_Foster_Resume.pdf" target="_blank" rel="noopener">View Résumé</a>
+          <a class="btn ghost" href="#experience">See Experience</a>
+        </div>
+      </div>
+      <img class="headshot" src="headshot.png" alt="Jordan Foster headshot" />
+    </section>
+
+    <!-- INTRO -->
+    <section id="about" class="intro">
+      <h2>About Me</h2>
+      <p>I’m a Posse Scholar studying Management Information Systems (Cybersecurity minor). I love building simple systems—on campus and at work—that turn ideas into action. From sales strategy at scale to product research and community mentoring, I focus on clarity, empathy, and results.</p>
+      <div class="badges">
+        <span class="badge">Texas A&amp;M</span>
+        <span class="badge">Posse Scholar</span>
+        <span class="badge">Financial Literacy</span>
+        <span class="badge">Product Mindset</span>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Dell Technologies — Sales Strategy, Process &amp; Operations Intern</h3>
+          <p class="muted">Round Rock, TX • Summer 2025</p>
+          <ul>
+            <li>Gathered seller feedback & usage data to align modernization tools with needs.</li>
+            <li>Supported a $900M sales productivity initiative with quantitative & qualitative insights.</li>
+            <li>Presented data-driven findings to stakeholders to improve seller experience.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Klein Tools — Product Management Extern</h3>
+          <p class="muted">Summer 2025</p>
+          <ul>
+            <li>Partnered with design, engineering, procurement, and marketing across lifecycle.</li>
+            <li>Ran a mock voice-of-customer study and informed product changes.</li>
+            <li>Delivered recommendations that strengthened cross-functional collaboration.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>DarTex Technical Services — Technical Operations Intern</h3>
+          <p class="muted">Remote • 2023 – 2024</p>
+          <ul>
+            <li>Managed AV installation work orders using IT service platforms.</li>
+            <li>Allocated 50+ technicians by skills, location, and availability to maximize efficiency.</li>
+            <li>Consulted with clients to troubleshoot audio-visual challenges.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Technical</h3>
+          <p>SQL, C#, Python (basic), Power BI, HTML, Excel, PowerPoint</p>
+        </article>
+        <article class="card">
+          <h3>Interests</h3>
+          <p>Fitness, Personal Finance, Leadership Development</p>
+        </article>
+        <article class="card">
+          <h3>Honors & Programs</h3>
+          <p>POSSE Foundation Full-Tuition Scholarship; Management Leadership for Tomorrow (Career Prep Fellow)</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="intro">
+      <h2>Let’s Connect</h2>
+      <p>Email: <a href="mailto:Jfoster23@tamu.edu">Jfoster23@tamu.edu</a> • LinkedIn: <a href="https://www.linkedin.com/in/jordan-foster1248" target="_blank" rel="noopener">/in/jordan-foster1248</a> • GitHub: <a href="https://github.com/jordan348" target="_blank" rel="noopener">@jordan348</a></p>
+    </section>
+
+    <footer>© <span id="year"></span> Jordan Foster • Built with clarity & compounding.</footer>
+  </div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
